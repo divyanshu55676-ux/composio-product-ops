@@ -1065,16 +1065,16 @@ APP_KNOWLEDGE_BASE: Dict[str, Dict[str, Any]] = {
         "fallback_urls": ["https://paygent.co.jp"]
     },
     "ipayx": {
-        "one_liner": "Specialized electronic bill presentment and payment (EBPP) processing platform for healthcare and enterprise billing.",
-        "auth_methods": ["API Key (SOAP / HTTP Token)"],
-        "access_type": "Gated",
-        "api_surface": "Custom enterprise gateway APIs (SOAP/REST under NDA). No public MCP.",
-        "buildability_verdict": "Blocked",
-        "main_blocker": "Acquired by REPAY/BillingTree; legacy proprietary EBPP platform without public self-serve developer APIs.",
-        "feasibility_score": 2,
-        "wave_bucket": "Wave 3 (Gated/Partnership Outreach)",
-        "evidence_url": "https://www.repay.com",
-        "fallback_urls": ["https://repay.com", "https://tracxn.com/d/companies/ipayx/__8DqZ4M2a8E0C9kMvV_kUqXg4zP8"]
+        "one_liner": "FINTRAC-registered FX forensic audit layer that detects hidden bank FX markup vs live mid-market rates across 300+ currencies, with a live MCP server for AI agents.",
+        "auth_methods": ["API Key (Bearer)", "No auth (3 free audits/IP/month)"],
+        "access_type": "Self-Serve",
+        "api_surface": "REST API (OpenAPI 3.1 at /.well-known/openapi.json), MCP server at mcp.ipayx.ai/mcp (Streamable HTTP), Zapier/n8n connectors. MCP tools: check_fx_mid_market_rate, audit_fx_transaction, full_forensic_fx_report.",
+        "buildability_verdict": "Ready Today",
+        "main_blocker": "None",
+        "feasibility_score": 9,
+        "wave_bucket": "Wave 1 (Quick Win)",
+        "evidence_url": "https://www.ipayx.ai/docs",
+        "fallback_urls": ["https://www.ipayx.ai", "https://mcp.ipayx.ai/mcp"]
     },
     "quickbooks": {
         "one_liner": "Cloud accounting software by Intuit for managing small business bookkeeping, invoicing, and expenses.",
