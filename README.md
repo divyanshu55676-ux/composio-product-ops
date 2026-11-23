@@ -114,13 +114,30 @@ To run the complete 2-pass research and verification pipeline across all 100 app
 python3 research_agent.py --workers 12
 ```
 
-### CLI Flags Reference
-* `--input <path>`: Path to input specification (default: `apps.json`).
+### CLI Flags & Filtering Reference
+The research agent supports granular filtering to test specific verticals or slices of the 100 apps:
+
 * `--limit <N>`: Evaluate only the first N applications (e.g. `--limit 5`).
+* `--category "<name>"`: Filter by category (e.g. `--category "CRM and Sales"`, `--category Fintech`).
+* `--search "<term>"`: Filter by search keyword matching app name or ID (e.g. `--search notion`, `--search github`).
+* `--wave <1|2|3>`: Filter by wave bucket (e.g. `--wave 1` for Quick Wins, `--wave 3` for Gated apps).
 * `--workers <N>`: Number of concurrent HTTP health check threads (default: `12`).
+* `--input <path>`: Path to input specification (default: `apps.json`).
 * `--output-pass1 <path>`: Pass 1 output destination (default: `results_pass1.json`).
 * `--output-final <path>`: Final output destination (default: `results_final.json`).
 * `--verbose`: Print detailed debug logs.
+
+#### Filter Examples:
+```bash
+# Evaluate only CRM and Sales apps
+python3 research_agent.py --category "CRM and Sales"
+
+# Evaluate all Wave 3 (gated/blocked) targets
+python3 research_agent.py --wave 3
+
+# Fast search check for GitHub
+python3 research_agent.py --search github
+```
 
 ---
 

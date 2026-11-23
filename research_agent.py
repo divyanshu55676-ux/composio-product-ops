@@ -1386,6 +1386,9 @@ def extract_app_profile(app_spec: Dict[str, Any]) -> AppResult:
 def run_pipeline(
     apps_data: List[Dict[str, Any]],
     limit: Optional[int] = None,
+    category: Optional[str] = None,
+    search: Optional[str] = None,
+    wave: Optional[Union[int, str]] = None,
     workers: int = 12,
     output_pass1_path: str = "results_pass1.json",
     output_final_path: str = "results_final.json",
@@ -1393,8 +1396,26 @@ def run_pipeline(
 ) -> Dict[str, Any]:
     """
     Runs Pass 1 extraction & verification, followed by Pass 2 self-healing for any broken/unreachable URLs.
+    Supports filtering by category, search term, wave bucket, and limit.
     """
-    target_apps = apps_data[:limit] if limit and limit > 0 else apps_data
+    filtered_apps = apps_data
+    if category:
+        cat_lower = category.strip().lower()
+        filtered_apps = [a for a in filtered_apps if cat_lower in a.get("category", "").lower()]
+    if search:
+        s_lower = search.strip().lower()
+        filtered_apps = [
+            a for a in filtered_apps
+            if s_lower in a.get("name", "").lower() or s_lower in a.get("id", "").lower() or s_lower in a.get("category", "").lower()
+        ]
+    if wave:
+        w_str = str(wave).strip()
+        filtered_apps = [
+            a for a in filtered_apps
+            if f"wave {w_str}" in APP_KNOWLEDGE_BASE.get(a.get("id", ""), {}).get("wave_bucket", "").lower()
+        ]
+
+    target_apps = filtered_apps[:limit] if limit and limit > 0 else filtered_apps
     total_count = len(target_apps)
     logger.info("Starting evaluation pipeline for %d apps (limit=%s)...", total_count, str(limit))
 
@@ -1603,6 +1624,24 @@ def main() -> None:
         help="Number of apps to evaluate (e.g. 5 for quick testing)"
     )
     parser.add_argument(
+        "--category",
+        type=str,
+        default=None,
+        help="Filter apps by category name (e.g. 'CRM and Sales', 'Fintech', 'Productivity')"
+    )
+    parser.add_argument(
+        "--search",
+        type=str,
+        default=None,
+        help="Filter apps matching a search term in name or ID (e.g. 'github', 'notion', 'ads')"
+    )
+    parser.add_argument(
+        "--wave",
+        type=str,
+        default=None,
+        help="Filter apps by Wave bucket: '1', '2', or '3'"
+    )
+    parser.add_argument(
         "--workers",
         type=int,
         default=12,
@@ -1638,6 +1677,9 @@ def main() -> None:
     payload = run_pipeline(
         apps_data=apps_data,
         limit=args.limit,
+        category=args.category,
+        search=args.search,
+        wave=args.wave,
         workers=args.workers,
         output_pass1_path=args.output_pass1,
         output_final_path=args.output_final,
