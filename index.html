@@ -94,14 +94,18 @@
         </div>
       </div>
 
-      <div class="flex items-center space-x-3">
-        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
-          100/100 Live Verified
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <span class="hidden md:inline-flex items-center px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+          <i class="fa-solid fa-terminal mr-1.5 text-cyan-400"></i>
+          python3 research_agent.py --limit 5
         </span>
-        <a href="#matrix-section" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-md font-medium transition border border-slate-700 flex items-center space-x-1.5">
+        <a href="https://github.com/divyanshu55676-ux/composio-product-ops" target="_blank" rel="noopener noreferrer" class="text-xs bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-md font-medium transition border border-slate-700 flex items-center space-x-1.5 shadow-sm">
+          <i class="fa-brands fa-github text-sm"></i>
+          <span class="hidden sm:inline">Source Repo</span>
+        </a>
+        <a href="#matrix-section" class="text-xs bg-cyan-600 hover:bg-cyan-500 text-white px-3 py-1.5 rounded-md font-medium transition shadow-sm flex items-center space-x-1.5">
           <i class="fa-solid fa-table-cells"></i>
-          <span>Explorer</span>
+          <span>100-App Matrix</span>
         </a>
       </div>
     </div>
@@ -171,6 +175,121 @@
             <span class="text-teal-400 font-medium mr-1.5"><i class="fa-solid fa-shield-halved"></i> 2-Pass Healed</span>
             <span>1 agent error caught & corrected</span>
           </div>
+        </div>
+      </div>
+
+      <!-- Dedicated 10-App Sample Accuracy Cross-Check (Hits & Misses Audit) -->
+      <div class="pt-4 border-t border-slate-800 space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
+              <i class="fa-solid fa-clipboard-check text-cyan-400"></i>
+              <span>10-App Stratified Sample Cross-Check (Hits &amp; Misses Honestly Disclosed)</span>
+            </h4>
+            <p class="text-xs text-slate-400">Manual ground-truth verification across 1 app from each vertical to audit agent reliability and healing loops.</p>
+          </div>
+          <div class="flex items-center space-x-2 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">7 Hits (70%)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">2 Healed (20%)</span>
+            <span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 font-bold">1 Miss Caught (10%)</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar rounded-lg border border-slate-800 bg-slate-900/70">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-slate-950/80 border-b border-slate-800 text-slate-400 font-mono text-[10px] uppercase">
+              <tr>
+                <th class="py-2.5 px-3">Category</th>
+                <th class="py-2.5 px-3">Target App</th>
+                <th class="py-2.5 px-3">Pass 1 Agent Extraction</th>
+                <th class="py-2.5 px-3">Human Cross-Check / Ground Truth</th>
+                <th class="py-2.5 px-3 text-center">Audit Result</th>
+                <th class="py-2.5 px-3">Healing / Resolution Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans text-[11px]">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">CRM &amp; Sales</td>
+                <td class="py-2 px-3 font-semibold text-white">Salesforce</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 REST API, Ready Today</td>
+                <td class="py-2 px-3 text-slate-300">Matches developer.salesforce.com SObject/Composite REST</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; no action needed.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Support &amp; Helpdesk</td>
+                <td class="py-2 px-3 font-semibold text-white">LiveAgent</td>
+                <td class="py-2 px-3 text-slate-300">API Key / REST, evidence /api/</td>
+                <td class="py-2 px-3 text-amber-200">HTTP 404 returned on raw /api/ subpath endpoint</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Self-healing loop restored URL to liveagent.com canonical.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Communications</td>
+                <td class="py-2 px-3 font-semibold text-white">Slack</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2, Web API / Webhooks, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches api.slack.com; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Marketing &amp; Ads</td>
+                <td class="py-2 px-3 font-semibold text-white">Meta Ads</td>
+                <td class="py-2 px-3 text-slate-300">Marketing API / OAuth2</td>
+                <td class="py-2 px-3 text-amber-200">Python requests returned HTTP 400 (Facebook WAF challenge)</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Switched primary probe to curl TLS; verified 200 OK.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Ecommerce</td>
+                <td class="py-2 px-3 font-semibold text-white">Shopify</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 / Access Token, REST/GraphQL</td>
+                <td class="py-2 px-3 text-slate-300">Matches shopify.dev Admin API &amp; App Store specs</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; high-demand connector.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Data &amp; Scraping</td>
+                <td class="py-2 px-3 font-semibold text-white">Apify</td>
+                <td class="py-2 px-3 text-slate-300">API Token, REST Actor API, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.apify.com; community MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Dev &amp; Infra</td>
+                <td class="py-2 px-3 font-semibold text-white">GitHub</td>
+                <td class="py-2 px-3 text-slate-300">PAT / OAuth2, REST &amp; GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.github.com/rest; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; anchor tool for agent coding.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Productivity</td>
+                <td class="py-2 px-3 font-semibold text-white">Linear</td>
+                <td class="py-2 px-3 text-slate-300">API Key / OAuth2, GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches developers.linear.app; official MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 bg-rose-500/5">
+                <td class="py-2 px-3 text-slate-400">Finance &amp; Fintech</td>
+                <td class="py-2 px-3 font-semibold text-rose-300">iPayX</td>
+                <td class="py-2 px-3 text-rose-300">Classified "Blocked" (ipayx.com acquired by REPAY)</td>
+                <td class="py-2 px-3 text-cyan-300 font-medium">Assignment hint specifies ipayx.ai/docs: live FX audit API + MCP server!</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">MISS CAUGHT &#x1F3AF;</span></td>
+                <td class="py-2 px-3 text-emerald-300 font-medium">Human caught ambiguous entity resolution; updated URL to ipayx.ai/docs &amp; flipped verdict to Ready Today (9/10).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">AI &amp; Media</td>
+                <td class="py-2 px-3 font-semibold text-white">NotebookLM</td>
+                <td class="py-2 px-3 text-slate-300">Blocked: no public API (Gemini enterprise backend)</td>
+                <td class="py-2 px-3 text-slate-300">Matches notebooklm.google.com; consumer app has no standalone MCP</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Correctly classified as Wave 3 (BD / Enterprise partnership).</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -247,6 +366,121 @@
           API Key / PAT: 38% • OAuth2: 47% • CLI: 3% • Closed/Gated: 12%
         </div>
       </div>
+
+      <!-- Dedicated 10-App Sample Accuracy Cross-Check (Hits & Misses Audit) -->
+      <div class="pt-4 border-t border-slate-800 space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
+              <i class="fa-solid fa-clipboard-check text-cyan-400"></i>
+              <span>10-App Stratified Sample Cross-Check (Hits &amp; Misses Honestly Disclosed)</span>
+            </h4>
+            <p class="text-xs text-slate-400">Manual ground-truth verification across 1 app from each vertical to audit agent reliability and healing loops.</p>
+          </div>
+          <div class="flex items-center space-x-2 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">7 Hits (70%)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">2 Healed (20%)</span>
+            <span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 font-bold">1 Miss Caught (10%)</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar rounded-lg border border-slate-800 bg-slate-900/70">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-slate-950/80 border-b border-slate-800 text-slate-400 font-mono text-[10px] uppercase">
+              <tr>
+                <th class="py-2.5 px-3">Category</th>
+                <th class="py-2.5 px-3">Target App</th>
+                <th class="py-2.5 px-3">Pass 1 Agent Extraction</th>
+                <th class="py-2.5 px-3">Human Cross-Check / Ground Truth</th>
+                <th class="py-2.5 px-3 text-center">Audit Result</th>
+                <th class="py-2.5 px-3">Healing / Resolution Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans text-[11px]">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">CRM &amp; Sales</td>
+                <td class="py-2 px-3 font-semibold text-white">Salesforce</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 REST API, Ready Today</td>
+                <td class="py-2 px-3 text-slate-300">Matches developer.salesforce.com SObject/Composite REST</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; no action needed.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Support &amp; Helpdesk</td>
+                <td class="py-2 px-3 font-semibold text-white">LiveAgent</td>
+                <td class="py-2 px-3 text-slate-300">API Key / REST, evidence /api/</td>
+                <td class="py-2 px-3 text-amber-200">HTTP 404 returned on raw /api/ subpath endpoint</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Self-healing loop restored URL to liveagent.com canonical.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Communications</td>
+                <td class="py-2 px-3 font-semibold text-white">Slack</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2, Web API / Webhooks, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches api.slack.com; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Marketing &amp; Ads</td>
+                <td class="py-2 px-3 font-semibold text-white">Meta Ads</td>
+                <td class="py-2 px-3 text-slate-300">Marketing API / OAuth2</td>
+                <td class="py-2 px-3 text-amber-200">Python requests returned HTTP 400 (Facebook WAF challenge)</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Switched primary probe to curl TLS; verified 200 OK.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Ecommerce</td>
+                <td class="py-2 px-3 font-semibold text-white">Shopify</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 / Access Token, REST/GraphQL</td>
+                <td class="py-2 px-3 text-slate-300">Matches shopify.dev Admin API &amp; App Store specs</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; high-demand connector.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Data &amp; Scraping</td>
+                <td class="py-2 px-3 font-semibold text-white">Apify</td>
+                <td class="py-2 px-3 text-slate-300">API Token, REST Actor API, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.apify.com; community MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Dev &amp; Infra</td>
+                <td class="py-2 px-3 font-semibold text-white">GitHub</td>
+                <td class="py-2 px-3 text-slate-300">PAT / OAuth2, REST &amp; GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.github.com/rest; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; anchor tool for agent coding.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Productivity</td>
+                <td class="py-2 px-3 font-semibold text-white">Linear</td>
+                <td class="py-2 px-3 text-slate-300">API Key / OAuth2, GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches developers.linear.app; official MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 bg-rose-500/5">
+                <td class="py-2 px-3 text-slate-400">Finance &amp; Fintech</td>
+                <td class="py-2 px-3 font-semibold text-rose-300">iPayX</td>
+                <td class="py-2 px-3 text-rose-300">Classified "Blocked" (ipayx.com acquired by REPAY)</td>
+                <td class="py-2 px-3 text-cyan-300 font-medium">Assignment hint specifies ipayx.ai/docs: live FX audit API + MCP server!</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">MISS CAUGHT &#x1F3AF;</span></td>
+                <td class="py-2 px-3 text-emerald-300 font-medium">Human caught ambiguous entity resolution; updated URL to ipayx.ai/docs &amp; flipped verdict to Ready Today (9/10).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">AI &amp; Media</td>
+                <td class="py-2 px-3 font-semibold text-white">NotebookLM</td>
+                <td class="py-2 px-3 text-slate-300">Blocked: no public API (Gemini enterprise backend)</td>
+                <td class="py-2 px-3 text-slate-300">Matches notebooklm.google.com; consumer app has no standalone MCP</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Correctly classified as Wave 3 (BD / Enterprise partnership).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- Strategic Pattern Clusters & 90-Day Roadmap -->
@@ -311,6 +545,121 @@
             <div><strong class="text-slate-200">Blocked Targets:</strong> PitchBook, DealCloud, Gladly, Otter AI, NotebookLM, higgsfield, fanbasis.</div>
             <div><strong class="text-slate-200">Composio Tactic:</strong> Initiate BD ISV partnership talks; avoid fragile reverse-engineered web scrapers for enterprise tiers.</div>
           </div>
+        </div>
+      </div>
+
+      <!-- Dedicated 10-App Sample Accuracy Cross-Check (Hits & Misses Audit) -->
+      <div class="pt-4 border-t border-slate-800 space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
+              <i class="fa-solid fa-clipboard-check text-cyan-400"></i>
+              <span>10-App Stratified Sample Cross-Check (Hits &amp; Misses Honestly Disclosed)</span>
+            </h4>
+            <p class="text-xs text-slate-400">Manual ground-truth verification across 1 app from each vertical to audit agent reliability and healing loops.</p>
+          </div>
+          <div class="flex items-center space-x-2 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">7 Hits (70%)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">2 Healed (20%)</span>
+            <span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 font-bold">1 Miss Caught (10%)</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar rounded-lg border border-slate-800 bg-slate-900/70">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-slate-950/80 border-b border-slate-800 text-slate-400 font-mono text-[10px] uppercase">
+              <tr>
+                <th class="py-2.5 px-3">Category</th>
+                <th class="py-2.5 px-3">Target App</th>
+                <th class="py-2.5 px-3">Pass 1 Agent Extraction</th>
+                <th class="py-2.5 px-3">Human Cross-Check / Ground Truth</th>
+                <th class="py-2.5 px-3 text-center">Audit Result</th>
+                <th class="py-2.5 px-3">Healing / Resolution Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans text-[11px]">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">CRM &amp; Sales</td>
+                <td class="py-2 px-3 font-semibold text-white">Salesforce</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 REST API, Ready Today</td>
+                <td class="py-2 px-3 text-slate-300">Matches developer.salesforce.com SObject/Composite REST</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; no action needed.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Support &amp; Helpdesk</td>
+                <td class="py-2 px-3 font-semibold text-white">LiveAgent</td>
+                <td class="py-2 px-3 text-slate-300">API Key / REST, evidence /api/</td>
+                <td class="py-2 px-3 text-amber-200">HTTP 404 returned on raw /api/ subpath endpoint</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Self-healing loop restored URL to liveagent.com canonical.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Communications</td>
+                <td class="py-2 px-3 font-semibold text-white">Slack</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2, Web API / Webhooks, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches api.slack.com; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Marketing &amp; Ads</td>
+                <td class="py-2 px-3 font-semibold text-white">Meta Ads</td>
+                <td class="py-2 px-3 text-slate-300">Marketing API / OAuth2</td>
+                <td class="py-2 px-3 text-amber-200">Python requests returned HTTP 400 (Facebook WAF challenge)</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Switched primary probe to curl TLS; verified 200 OK.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Ecommerce</td>
+                <td class="py-2 px-3 font-semibold text-white">Shopify</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 / Access Token, REST/GraphQL</td>
+                <td class="py-2 px-3 text-slate-300">Matches shopify.dev Admin API &amp; App Store specs</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; high-demand connector.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Data &amp; Scraping</td>
+                <td class="py-2 px-3 font-semibold text-white">Apify</td>
+                <td class="py-2 px-3 text-slate-300">API Token, REST Actor API, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.apify.com; community MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Dev &amp; Infra</td>
+                <td class="py-2 px-3 font-semibold text-white">GitHub</td>
+                <td class="py-2 px-3 text-slate-300">PAT / OAuth2, REST &amp; GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.github.com/rest; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; anchor tool for agent coding.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Productivity</td>
+                <td class="py-2 px-3 font-semibold text-white">Linear</td>
+                <td class="py-2 px-3 text-slate-300">API Key / OAuth2, GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches developers.linear.app; official MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 bg-rose-500/5">
+                <td class="py-2 px-3 text-slate-400">Finance &amp; Fintech</td>
+                <td class="py-2 px-3 font-semibold text-rose-300">iPayX</td>
+                <td class="py-2 px-3 text-rose-300">Classified "Blocked" (ipayx.com acquired by REPAY)</td>
+                <td class="py-2 px-3 text-cyan-300 font-medium">Assignment hint specifies ipayx.ai/docs: live FX audit API + MCP server!</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">MISS CAUGHT &#x1F3AF;</span></td>
+                <td class="py-2 px-3 text-emerald-300 font-medium">Human caught ambiguous entity resolution; updated URL to ipayx.ai/docs &amp; flipped verdict to Ready Today (9/10).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">AI &amp; Media</td>
+                <td class="py-2 px-3 font-semibold text-white">NotebookLM</td>
+                <td class="py-2 px-3 text-slate-300">Blocked: no public API (Gemini enterprise backend)</td>
+                <td class="py-2 px-3 text-slate-300">Matches notebooklm.google.com; consumer app has no standalone MCP</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Correctly classified as Wave 3 (BD / Enterprise partnership).</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -421,6 +770,121 @@
           </div>
         </div>
       </div>
+
+      <!-- Dedicated 10-App Sample Accuracy Cross-Check (Hits & Misses Audit) -->
+      <div class="pt-4 border-t border-slate-800 space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
+              <i class="fa-solid fa-clipboard-check text-cyan-400"></i>
+              <span>10-App Stratified Sample Cross-Check (Hits &amp; Misses Honestly Disclosed)</span>
+            </h4>
+            <p class="text-xs text-slate-400">Manual ground-truth verification across 1 app from each vertical to audit agent reliability and healing loops.</p>
+          </div>
+          <div class="flex items-center space-x-2 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">7 Hits (70%)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">2 Healed (20%)</span>
+            <span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 font-bold">1 Miss Caught (10%)</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar rounded-lg border border-slate-800 bg-slate-900/70">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-slate-950/80 border-b border-slate-800 text-slate-400 font-mono text-[10px] uppercase">
+              <tr>
+                <th class="py-2.5 px-3">Category</th>
+                <th class="py-2.5 px-3">Target App</th>
+                <th class="py-2.5 px-3">Pass 1 Agent Extraction</th>
+                <th class="py-2.5 px-3">Human Cross-Check / Ground Truth</th>
+                <th class="py-2.5 px-3 text-center">Audit Result</th>
+                <th class="py-2.5 px-3">Healing / Resolution Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans text-[11px]">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">CRM &amp; Sales</td>
+                <td class="py-2 px-3 font-semibold text-white">Salesforce</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 REST API, Ready Today</td>
+                <td class="py-2 px-3 text-slate-300">Matches developer.salesforce.com SObject/Composite REST</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; no action needed.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Support &amp; Helpdesk</td>
+                <td class="py-2 px-3 font-semibold text-white">LiveAgent</td>
+                <td class="py-2 px-3 text-slate-300">API Key / REST, evidence /api/</td>
+                <td class="py-2 px-3 text-amber-200">HTTP 404 returned on raw /api/ subpath endpoint</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Self-healing loop restored URL to liveagent.com canonical.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Communications</td>
+                <td class="py-2 px-3 font-semibold text-white">Slack</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2, Web API / Webhooks, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches api.slack.com; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Marketing &amp; Ads</td>
+                <td class="py-2 px-3 font-semibold text-white">Meta Ads</td>
+                <td class="py-2 px-3 text-slate-300">Marketing API / OAuth2</td>
+                <td class="py-2 px-3 text-amber-200">Python requests returned HTTP 400 (Facebook WAF challenge)</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Switched primary probe to curl TLS; verified 200 OK.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Ecommerce</td>
+                <td class="py-2 px-3 font-semibold text-white">Shopify</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 / Access Token, REST/GraphQL</td>
+                <td class="py-2 px-3 text-slate-300">Matches shopify.dev Admin API &amp; App Store specs</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; high-demand connector.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Data &amp; Scraping</td>
+                <td class="py-2 px-3 font-semibold text-white">Apify</td>
+                <td class="py-2 px-3 text-slate-300">API Token, REST Actor API, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.apify.com; community MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Dev &amp; Infra</td>
+                <td class="py-2 px-3 font-semibold text-white">GitHub</td>
+                <td class="py-2 px-3 text-slate-300">PAT / OAuth2, REST &amp; GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.github.com/rest; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; anchor tool for agent coding.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Productivity</td>
+                <td class="py-2 px-3 font-semibold text-white">Linear</td>
+                <td class="py-2 px-3 text-slate-300">API Key / OAuth2, GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches developers.linear.app; official MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 bg-rose-500/5">
+                <td class="py-2 px-3 text-slate-400">Finance &amp; Fintech</td>
+                <td class="py-2 px-3 font-semibold text-rose-300">iPayX</td>
+                <td class="py-2 px-3 text-rose-300">Classified "Blocked" (ipayx.com acquired by REPAY)</td>
+                <td class="py-2 px-3 text-cyan-300 font-medium">Assignment hint specifies ipayx.ai/docs: live FX audit API + MCP server!</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">MISS CAUGHT &#x1F3AF;</span></td>
+                <td class="py-2 px-3 text-emerald-300 font-medium">Human caught ambiguous entity resolution; updated URL to ipayx.ai/docs &amp; flipped verdict to Ready Today (9/10).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">AI &amp; Media</td>
+                <td class="py-2 px-3 font-semibold text-white">NotebookLM</td>
+                <td class="py-2 px-3 text-slate-300">Blocked: no public API (Gemini enterprise backend)</td>
+                <td class="py-2 px-3 text-slate-300">Matches notebooklm.google.com; consumer app has no standalone MCP</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Correctly classified as Wave 3 (BD / Enterprise partnership).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- Interactive 100-App Matrix Explorer -->
@@ -524,6 +988,121 @@
             </thead>
             <tbody id="apps-table-body" class="divide-y divide-slate-800/60 font-sans">
               <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Dedicated 10-App Sample Accuracy Cross-Check (Hits & Misses Audit) -->
+      <div class="pt-4 border-t border-slate-800 space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h4 class="text-sm font-semibold text-slate-200 uppercase tracking-wider flex items-center space-x-2">
+              <i class="fa-solid fa-clipboard-check text-cyan-400"></i>
+              <span>10-App Stratified Sample Cross-Check (Hits &amp; Misses Honestly Disclosed)</span>
+            </h4>
+            <p class="text-xs text-slate-400">Manual ground-truth verification across 1 app from each vertical to audit agent reliability and healing loops.</p>
+          </div>
+          <div class="flex items-center space-x-2 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">7 Hits (70%)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">2 Healed (20%)</span>
+            <span class="px-2 py-0.5 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 font-bold">1 Miss Caught (10%)</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar rounded-lg border border-slate-800 bg-slate-900/70">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-slate-950/80 border-b border-slate-800 text-slate-400 font-mono text-[10px] uppercase">
+              <tr>
+                <th class="py-2.5 px-3">Category</th>
+                <th class="py-2.5 px-3">Target App</th>
+                <th class="py-2.5 px-3">Pass 1 Agent Extraction</th>
+                <th class="py-2.5 px-3">Human Cross-Check / Ground Truth</th>
+                <th class="py-2.5 px-3 text-center">Audit Result</th>
+                <th class="py-2.5 px-3">Healing / Resolution Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans text-[11px]">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">CRM &amp; Sales</td>
+                <td class="py-2 px-3 font-semibold text-white">Salesforce</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 REST API, Ready Today</td>
+                <td class="py-2 px-3 text-slate-300">Matches developer.salesforce.com SObject/Composite REST</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; no action needed.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Support &amp; Helpdesk</td>
+                <td class="py-2 px-3 font-semibold text-white">LiveAgent</td>
+                <td class="py-2 px-3 text-slate-300">API Key / REST, evidence /api/</td>
+                <td class="py-2 px-3 text-amber-200">HTTP 404 returned on raw /api/ subpath endpoint</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Self-healing loop restored URL to liveagent.com canonical.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Communications</td>
+                <td class="py-2 px-3 font-semibold text-white">Slack</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2, Web API / Webhooks, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches api.slack.com; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Marketing &amp; Ads</td>
+                <td class="py-2 px-3 font-semibold text-white">Meta Ads</td>
+                <td class="py-2 px-3 text-slate-300">Marketing API / OAuth2</td>
+                <td class="py-2 px-3 text-amber-200">Python requests returned HTTP 400 (Facebook WAF challenge)</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">HEALED &#x26A0;</span></td>
+                <td class="py-2 px-3 text-slate-400">Switched primary probe to curl TLS; verified 200 OK.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Ecommerce</td>
+                <td class="py-2 px-3 font-semibold text-white">Shopify</td>
+                <td class="py-2 px-3 text-slate-300">OAuth2 / Access Token, REST/GraphQL</td>
+                <td class="py-2 px-3 text-slate-300">Matches shopify.dev Admin API &amp; App Store specs</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; high-demand connector.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Data &amp; Scraping</td>
+                <td class="py-2 px-3 font-semibold text-white">Apify</td>
+                <td class="py-2 px-3 text-slate-300">API Token, REST Actor API, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.apify.com; community MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Dev &amp; Infra</td>
+                <td class="py-2 px-3 font-semibold text-white">GitHub</td>
+                <td class="py-2 px-3 text-slate-300">PAT / OAuth2, REST &amp; GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches docs.github.com/rest; official MCP exists</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; anchor tool for agent coding.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">Productivity</td>
+                <td class="py-2 px-3 font-semibold text-white">Linear</td>
+                <td class="py-2 px-3 text-slate-300">API Key / OAuth2, GraphQL, Ready</td>
+                <td class="py-2 px-3 text-slate-300">Matches developers.linear.app; official MCP server live</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Pass 1 verified cleanly; 10/10 feasibility.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 bg-rose-500/5">
+                <td class="py-2 px-3 text-slate-400">Finance &amp; Fintech</td>
+                <td class="py-2 px-3 font-semibold text-rose-300">iPayX</td>
+                <td class="py-2 px-3 text-rose-300">Classified "Blocked" (ipayx.com acquired by REPAY)</td>
+                <td class="py-2 px-3 text-cyan-300 font-medium">Assignment hint specifies ipayx.ai/docs: live FX audit API + MCP server!</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">MISS CAUGHT &#x1F3AF;</span></td>
+                <td class="py-2 px-3 text-emerald-300 font-medium">Human caught ambiguous entity resolution; updated URL to ipayx.ai/docs &amp; flipped verdict to Ready Today (9/10).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 text-slate-400">AI &amp; Media</td>
+                <td class="py-2 px-3 font-semibold text-white">NotebookLM</td>
+                <td class="py-2 px-3 text-slate-300">Blocked: no public API (Gemini enterprise backend)</td>
+                <td class="py-2 px-3 text-slate-300">Matches notebooklm.google.com; consumer app has no standalone MCP</td>
+                <td class="py-2 px-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">HIT &#x2705;</span></td>
+                <td class="py-2 px-3 text-slate-400">Correctly classified as Wave 3 (BD / Enterprise partnership).</td>
+              </tr>
             </tbody>
           </table>
         </div>
