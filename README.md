@@ -67,7 +67,7 @@ We triaged all 100 applications using a 3-wave framework balancing developer tim
 | **CRM and Sales** | 10 | 9 | 1 | **8.1 / 10** | 6 | 3 | 1 |
 | **Ecommerce** | 10 | 8 | 2 | **7.5 / 10** | 6 | 2 | 2 |
 | **AI, Research and Media-native** | 10 | 7 | 3 | **7.2 / 10** | 7 | 0 | 3 |
-| **Finance and Fintech** | 10 | 7 | 3 | **6.9 / 10** | 5 | 2 | 3 |
+| **Finance and Fintech** | 10 | 8 | 2 | **7.6 / 10** | 6 | 2 | 2 |
 
 ---
 
