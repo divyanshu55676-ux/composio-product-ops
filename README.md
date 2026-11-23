@@ -1,6 +1,6 @@
 # Composio AI Product Ops: 100-App AI Agent Toolkit & MCP Research Pipeline
 
-> **Executive PM Takeaway:** **89 of 100 target applications are buildable today** for Composio AI agent toolkits and Model Context Protocol (MCP) servers. **72 applications represent immediate Wave 1 quick wins** (self-serve API keys, PATs, or open-source CLIs) that can be integrated within 30 days.
+> **Executive PM Takeaway:** **90 of 100 target applications are buildable today** for Composio AI agent toolkits and Model Context Protocol (MCP) servers. **73 applications represent immediate Wave 1 quick wins** (self-serve API keys, PATs, or open-source CLIs) that can be integrated within 30 days.
 
 ---
 
@@ -15,12 +15,12 @@ This project delivers an automated research agent and 2-pass self-healing verifi
 | Metric | Result | Strategic PM Implication |
 | :--- | :---: | :--- |
 | **Total Apps Evaluated** | **100** | Full coverage across all 10 designated vertical categories |
-| **Ready Today** | **89 (89%)** | 89 apps have public APIs ready for immediate Composio toolkits |
-| **Blocked (Gated / No API)** | **11 (11%)** | Enterprise sales walls, private betas, or closed consumer apps |
-| **Average Feasibility Score** | **8.34 / 10** | High programmatic viability across the target ecosystem |
-| **Wave 1 (Quick Wins)** | **72 apps (72%)** | Instant self-serve keys / PATs; 1–2 day build turnaround |
+| **Ready Today** | **90 (90%)** | 90 apps have public APIs ready for immediate Composio toolkits |
+| **Blocked (Gated / No API)** | **10 (10%)** | Enterprise sales walls, private betas, or closed consumer apps |
+| **Average Feasibility Score** | **8.41 / 10** | High programmatic viability across the target ecosystem |
+| **Wave 1 (Quick Wins)** | **73 apps (73%)** | Instant self-serve keys / PATs; 1–2 day build turnaround |
 | **Wave 2 (OAuth Connectors)** | **17 apps (17%)** | Standard portals requiring managed OAuth2 & review flows |
-| **Wave 3 (BD / Gated Outreach)** | **11 apps (11%)** | High-touch enterprise NDAs, paid contracts, or no public API |
+| **Wave 3 (BD / Gated Outreach)** | **10 apps (10%)** | High-touch enterprise NDAs, paid contracts, or no public API |
 | **Final Documentation Accuracy** | **100.0%** | All 100 evidence links verified live via 2-pass self-healing |
 
 ---
@@ -31,12 +31,12 @@ We triaged all 100 applications using a 3-wave framework balancing developer tim
 
 ```
 [Wave 1: Quick Wins (Days 1–30)] ───► [Wave 2: Managed OAuth (Days 31–60)] ───► [Wave 3: BD Outreach (Days 61–90+)]
-• 72 Apps (Score 8–10)               • 17 Apps (Score 7–8)                      • 11 Apps (Score 1–4)
+• 73 Apps (Score 8–10)               • 17 Apps (Score 7–8)                      • 10 Apps (Score 1–4)
 • Instant API Key / PAT / CLI        • Multi-tenant OAuth2 App Flows            • Enterprise Sales & Closed Gates
 • Rapid OpenAPI Ingestion            • App Marketplace Reviews & Scopes         • Technology Partnerships & NDAs
 ```
 
-### Wave 1: Quick Wins (72 Apps — Feasibility 8–10)
+### Wave 1: Quick Wins (73 Apps — Feasibility 8–10)
 * **Characteristics:** Instant self-serve signup, immediate API key or Personal Access Token (PAT) generation from settings, open-source CLI tools, or well-documented REST/GraphQL endpoints.
 * **Top Verticals:** Developer Platforms (10/10), Productivity & Project Management (10/10), Data & Scraping (9/10), Communications (7/10).
 * **Representative Apps:** GitHub, Supabase, Cloudflare, Linear, Notion, Airtable, Stripe, Firecrawl, Apify, Bright Data, Reducto, Devin, Mermaid CLI.
@@ -47,10 +47,10 @@ We triaged all 100 applications using a 3-wave framework balancing developer tim
 * **Top Verticals:** Advertising & Marketing (Google Ads, Meta Ads, LinkedIn Ads, Pinterest), Enterprise Hubs (Salesforce, HubSpot, Slack, Shopify, WhatsApp Business, QuickBooks, Xero).
 * **Composio Value (Deepest Moat):** Individual developers struggle with setting up OAuth client IDs and token refresh handlers. Composio’s managed OAuth2 authentication abstracts this away, providing one-click authorization for end-users.
 
-### Wave 3: Gated & Partnership Outreach (11 Apps — Feasibility 1–4)
+### Wave 3: Gated & Partnership Outreach (10 Apps — Feasibility 1–4)
 * **Characteristics:** Blocked today due to enterprise sales qualification walls, custom contracts ($20k+/yr), vendor NDAs, private betas, or closed consumer apps with no public developer endpoints.
-* **Blocked Targets:** PitchBook, DealCloud, Gladly, Salesforce Commerce Cloud, Waterfall.io, Paygent Connect, iPayX, Otter AI, NotebookLM, higgsfield, fanbasis.
-* **Composio Strategy:** Avoid brittle reverse-engineered private scrapers for enterprise tiers. Hand off these 11 apps to Composio Business Development for formal ISV partnership discussions.
+* **Blocked Targets:** PitchBook, DealCloud, Gladly, Salesforce Commerce Cloud, Waterfall.io, Paygent Connect, Otter AI, NotebookLM, higgsfield, fanbasis.
+* **Composio Strategy:** Avoid brittle reverse-engineered private scrapers for enterprise tiers. Hand off these 10 apps to Composio Business Development for formal ISV partnership discussions.
 
 ---
 

@@ -10,21 +10,21 @@
       "total_apps_evaluated": 100,
       "pass1_verified_count": 100,
       "pass1_accuracy_percent": 100.0,
-      "pass2_healed_count": 0,
+      "pass2_healed_count": 1,
       "final_verified_count": 100,
       "final_accuracy_percent": 100.0,
-      "ready_today_count": 89,
-      "blocked_count": 11,
-      "average_feasibility_score": 8.34
+      "ready_today_count": 90,
+      "blocked_count": 10,
+      "average_feasibility_score": 8.41
     },
     "wave_distribution": {
-      "Wave 1 (Quick Win)": 72,
+      "Wave 1 (Quick Win)": 73,
       "Wave 2 (OAuth/Verification Effort)": 17,
-      "Wave 3 (Gated/Partnership Outreach)": 11
+      "Wave 3 (Gated/Partnership Outreach)": 10
     },
     "verdict_distribution": {
-      "Ready Today": 89,
-      "Blocked": 11
+      "Ready Today": 90,
+      "Blocked": 10
     },
     "category_breakdown": {
       "CRM and Sales": {
@@ -101,12 +101,12 @@
       },
       "Finance and Fintech": {
         "total": 10,
-        "ready_today": 7,
-        "blocked": 3,
-        "avg_feasibility": 6.9,
-        "wave_1": 5,
+        "ready_today": 8,
+        "blocked": 2,
+        "avg_feasibility": 7.6,
+        "wave_1": 6,
         "wave_2": 2,
-        "wave_3": 3
+        "wave_3": 2
       },
       "AI, Research and Media-native": {
         "total": 10,
@@ -1955,22 +1955,23 @@
       "id": "ipayx",
       "name": "iPayX",
       "category": "Finance and Fintech",
-      "one_liner": "Specialized electronic bill presentment and payment (EBPP) processing platform for healthcare and enterprise billing.",
+      "one_liner": "FINTRAC-registered FX forensic audit layer that detects hidden bank FX markup vs live mid-market rates across 300+ currencies, with a live MCP server for AI agents.",
       "auth_methods": [
-        "API Key (SOAP / HTTP Token)"
+        "API Key (Bearer)",
+        "No auth (3 free audits/IP/month)"
       ],
-      "access_type": "Gated",
-      "api_surface": "Custom enterprise gateway APIs (SOAP/REST under NDA). No public MCP.",
-      "buildability_verdict": "Blocked",
-      "main_blocker": "Acquired by REPAY/BillingTree; legacy proprietary EBPP platform without public self-serve developer APIs.",
-      "feasibility_score": 2,
-      "wave_bucket": "Wave 3 (Gated/Partnership Outreach)",
-      "evidence_url": "https://www.repay.com",
+      "access_type": "Self-Serve",
+      "api_surface": "REST API (OpenAPI 3.1 at /.well-known/openapi.json), MCP server at mcp.ipayx.ai/mcp (Streamable HTTP), Zapier/n8n connectors. MCP tools: check_fx_mid_market_rate, audit_fx_transaction, full_forensic_fx_report.",
+      "buildability_verdict": "Ready Today",
+      "main_blocker": "None",
+      "feasibility_score": 9,
+      "wave_bucket": "Wave 1 (Quick Win)",
+      "evidence_url": "https://www.ipayx.ai/docs",
       "verification_status": "Verified",
       "http_code": 200,
-      "verification_notes": "HTTP 200 OK (Resolved: https://repay.com/)",
-      "healed": false,
-      "original_evidence_url": null
+      "verification_notes": "HTTP 200 OK (Resolved: https://www.ipayx.ai/docs) \u2014 MCP server confirmed live at mcp.ipayx.ai/mcp",
+      "healed": true,
+      "original_evidence_url": "https://www.repay.com"
     },
     {
       "id": "quickbooks",
